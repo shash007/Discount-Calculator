@@ -1,0 +1,187 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:id="@+id/tvListedPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:clickable="false"
+                
+                android:text="@string/tvListedPrice" />
+
+            <EditText
+                android:id="@+id/etListedPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:ems="9"
+                android:hint="@string/etLPHint"
+                android:inputType="numberDecimal" >
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_gravity="left"
+                
+                android:clickable="false"
+                android:text="@string/tvDiscount" />
+
+            <RadioGroup
+                android:id="@+id/rgDiscount"
+                android:layout_width="350dp"
+                
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rd10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:checked="false"
+                    android:text="@string/rd10" />
+
+                <RadioButton
+                    android:id="@+id/rd25"
+                    android:layout_width="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rd25" />
+
+                <RadioButton
+                    android:id="@+id/rd50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="@string/rd50" />
+
+                <RadioButton
+                    android:id="@+id/rdCustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="@string/rdCustom" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:id="@+id/tvCustom"
+                android:layout_width="wrap_content"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:text="@string/tvCustom" />
+
+            <SeekBar
+                android:id="@+id/sbDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_weight="1"
+                android:max="@integer/max_discount"
+                android:progress="25" />
+            <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="@string/tvProgress" />
+            
+        </TableRow>
+
+        
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:clickable="false"
+                android:text="@string/tvSave" />
+
+            <TextView
+                android:id="@+id/tvSaveAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvSaveAmount" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:id="@+id/tvPay"
+                android:layout_width="wrap_content"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@string/tvPay" />
+
+            <TextView
+                android:id="@+id/tvPayAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvPayAmount" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/btnExit" />
+
+</LinearLayout>
